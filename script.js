@@ -1,6 +1,6 @@
 function makebubble(){
     var clutter="";
-for(var i=1;i<=250;i++){
+for(var i=1;i<=1000;i++){
     var rn=Math.floor(Math.random()*10)
     clutter += `<div class="bubble">${rn}</div>`;
 }

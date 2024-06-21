@@ -42,21 +42,23 @@ html,body{
     color: rgb(117, 146, 74);
 }
 .box{
-    padding: 6px 10px;
+    padding: 0.3vw 0.3vw;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 0.1vw;
     font-weight: 800;
-    font-size: 15px;
+    font-size: 1.4vw
 }
 h2{
     color: #fff;
+    font-size: 1.4vw;
 }
 #pbtm{
     display: flex;
     width: 100%;
     height: calc(100% - 100px);
-   padding: 10px;
+   padding: 10px ;
    gap: 10px;
+   padding-bottom: 5px;
    flex-wrap: wrap;
    align-items: center;
    justify-content: center;
@@ -74,4 +76,24 @@ h2{
 .bubble:hover{
     cursor: pointer;
     background-color: rgb(64, 162, 162);;
+}
+
+@media(max-width:400px){
+    #ptop{
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .elem h2{
+        font-size: 8px;
+    }
+    .box{
+        font-size: 8px;
+        padding: 0 2px;
+    }
+    #panel{
+        height: 92%;
+    }
+    #pbtm{
+        gap: 12px;
+    }
 }

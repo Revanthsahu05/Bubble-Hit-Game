@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family:"gillroy";
+    font-family: "Gillroy";
     box-sizing: border-box;
 }
-html,body{
+html, body {
     width: 100%;
     height: 100%;
 }
-#main{
+#main {
     width: 100%;
     height: 100%;
     background-color: rgb(152, 206, 206);
@@ -16,54 +16,69 @@ html,body{
     justify-content: center;
     align-items: center;
 }
-#panel{
+#start-screen {
+    text-align: center;
+}
+#start-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#panel {
     width: 80%;
     height: 80%;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
+    display: none;
+    flex-direction: column;
 }
-#ptop{
+#panel.hidden {
+    display: none;
+}
+#panel.visible {
+    display: flex;
+}
+#ptop {
     gap: 20px;
     width: 100%;
     height: 100px;
     background-color: rgb(11, 112, 112);
-     display: flex;
-     align-items: center;
-     padding: 0 30%;
-     justify-content: space-between;
-}
-.elem{
-    /* width: 10%; */
     display: flex;
-    /* background-color: red; */
+    align-items: center;
+    padding: 0 30%;
+    justify-content: space-between;
+}
+.elem {
+    display: flex;
     align-items: center;
     gap: 20px;
     color: rgb(117, 146, 74);
 }
-.box{
+.box {
     padding: 0.3vw 0.3vw;
     background-color: #fff;
     border-radius: 0.1vw;
     font-weight: 800;
-    font-size: 1.4vw
+    font-size: 1.4vw;
 }
-h2{
+h2 {
     color: #fff;
     font-size: 1.4vw;
 }
-#pbtm{
+#pbtm {
     display: flex;
     width: 100%;
     height: calc(100% - 100px);
-   padding: 10px ;
-   gap: 10px;
-   padding-bottom: 5px;
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    padding-bottom: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-.bubble{
+.bubble {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,27 +88,26 @@ h2{
     background-color: rgb(50, 142, 142);
     color: aqua;
 }
-.bubble:hover{
+.bubble:hover {
     cursor: pointer;
-    background-color: rgb(64, 162, 162);;
+    background-color: rgb(64, 162, 162);
 }
-
-@media(max-width:400px){
-    #ptop{
+@media (max-width: 400px) {
+    #ptop {
         flex-direction: column;
         padding: 10px 20px;
     }
-    .elem h2{
+    .elem h2 {
         font-size: 8px;
     }
-    .box{
+    .box {
         font-size: 8px;
         padding: 0 2px;
     }
-    #panel{
+    #panel {
         height: 92%;
     }
-    #pbtm{
+    #pbtm {
         gap: 12px;
     }
 }
